@@ -1,37 +1,61 @@
 # Usage Telemetry Schema
 
-High-volume telemetry is logically separate from transactional licensing data. Licensing decisions must not depend on best-effort analytics delivery unless explicitly designed.
+High-volume telemetry is logically separate from transactional licensing/audit data. Licensing decisions must not depend on best-effort analytics delivery unless a future approved design explicitly says otherwise.
 
-## Planned telemetry families
+## Telemetry families
 
-- camera usage
+- camera/input usage aggregates
 - feature usage
 - active hours
 - inference counts
-- trial activity
-- capacity history
+- performance/latency aggregates
+- capacity/resource history
+- trial activity aggregates
 - runtime/application/model versions
-- deployment health
+- deployment health aggregates
 
-## Event example
+## Common event envelope
 
 ~~~json
 {
+  "schema_version": 1,
   "event_id": "tel_...",
   "device_id": "dev_001",
+  "customer_id": "cust_001",
   "site_id": "site_a",
-  "feature_id": "ppe_detection",
   "event_type": "feature_usage_aggregate",
+  "occurred_at": "2026-10-18T11:00:00Z",
   "period": {"start": "2026-10-18T10:00:00Z", "end": "2026-10-18T11:00:00Z"},
-  "metrics": {"active_minutes": 55, "inference_count": 183240, "camera_count": 4},
-  "runtime": {"app": "5.8.0", "model": "7.3.0"}
+  "dimensions": {
+    "feature_id": "ppe_detection",
+    "app_version": "5.8.0",
+    "model_version": "7.3.0"
+  },
+  "metrics": {
+    "active_minutes": 55,
+    "inference_count": 183240,
+    "camera_count": 4
+  }
 }
 ~~~
 
-## Architecture
+## Schema rules
 
-Operational transactional DB remains PostgreSQL. Telemetry should move to a dedicated analytics/time-series/data-warehouse path when volume justifies it.
+- version every event family
+- timestamps in UTC
+- event ID for deduplication
+- customer/device/site attribution validated server-side against registered ownership
+- additive evolution preferred; breaking changes create new schema/event version
+- large arbitrary JSON payloads are avoided when stable typed dimensions/metrics exist
 
-## Privacy open decision
+## Operational versus telemetry truth
 
-Retention, customer opt-in/opt-out, data residency and personally identifiable data policy remain formal open decisions and must be resolved before production telemetry beyond operational necessity.
+Grant acceptance, installation receipt, entitlement mutation and privileged audit events remain transactional LMS records. Telemetry can copy/aggregate them for analytics but is not the sole source of operational truth.
+
+## Storage
+
+PostgreSQL remains the operational transactional store. High-volume telemetry should use a dedicated time-series/analytics/warehouse path when volume warrants it.
+
+## Privacy boundary
+
+Video/image content and personally identifying analytic payloads are not collected by default. Retention, opt-in/opt-out, residency and allowed customer-specific telemetry remain an explicit open product/security decision.
