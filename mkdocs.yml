@@ -157,11 +157,16 @@ nav:
       - Threat Model & VAPT: security/threat-vapt.md
       - Privileged Action Matrix: security/approval-matrix.md
       - Security Control Baseline: security/security-control-baseline.md
+      - Human Identity & Sessions: security/identity-session-security.md
+      - Secrets & Certificates: security/secrets-and-certificates.md
       - Secure Coding Standard: security/secure-coding-standard.md
       - Tenant Isolation: security/tenant-isolation.md
+      - Edge Hardening: security/edge-hardening.md
       - Relay Security: security/relay-security.md
       - Signing Key Lifecycle: security/signing-key-lifecycle.md
       - Supply-Chain Security: security/supply-chain-security.md
+      - Vulnerability Management: security/vulnerability-management.md
+      - Security Logging & Detection: security/security-logging-monitoring.md
   - QA & Release:
       - Test Strategy: qa/test-strategy.md
       - Release Readiness: qa/release-readiness.md
