@@ -85,6 +85,7 @@ nav:
       - Trust Boundaries: architecture/trust-boundaries.md
       - Deployment Models: architecture/deployment-models.md
       - State Machines: architecture/state-machines.md
+      - Sequence Diagrams: architecture/sequence-diagrams.md
   - Licensing:
       - Overview: licensing/index.md
       - Entitlements & Allocations: licensing/entitlements.md
@@ -103,24 +104,35 @@ nav:
   - Backend:
       - Overview: backend/index.md
       - Database Design: backend/database.md
+      - Detailed Schema Baseline: backend/database-schema-details.md
       - API Standards: backend/api-standards.md
+      - API Contract Baseline: backend/api-contracts.md
+      - Error Model: backend/error-model.md
+      - Approval Workflows: backend/approval-workflows.md
+      - Observability & SLOs: backend/observability-slos.md
   - Edge Application:
       - Overview: edge/index.md
       - License Agent: edge/license-agent.md
       - Update Manager: edge/update-manager.md
+      - Offline Workflows: edge/offline-workflows.md
+      - Release Set & Rollback: edge/release-set.md
   - Security:
       - Overview: security/index.md
       - Signing & Model Protection: security/signing-models.md
       - Threat Model & VAPT: security/threat-vapt.md
+      - Privileged Action Matrix: security/approval-matrix.md
   - QA & Release:
       - Test Strategy: qa/test-strategy.md
       - Release Readiness: qa/release-readiness.md
+      - Definition of Ready / Done: qa/definition-of-ready-done.md
   - Operations:
       - Backup & Recovery: operations/backup-recovery.md
       - Monitoring & ERP: operations/monitoring-erp.md
+      - Disaster Recovery: operations/disaster-recovery.md
   - Governance:
       - Team RACI: governance/raci.md
       - Standards: governance/standards.md
+      - Change Control: governance/change-control.md
       - ADR Index: adr/index.md
       - ADR-001 Signed Grants: adr/001-signed-grants.md
       - ADR-002 Modular Monolith: adr/002-modular-monolith.md
