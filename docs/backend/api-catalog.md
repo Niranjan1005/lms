@@ -56,9 +56,21 @@ GET    /v1/devices/{device_id}/grants
 ~~~text
 POST   /v1/devices/{device_id}/capacity-assessments
 GET    /v1/devices/{device_id}/capacity-assessments
+GET    /v1/devices/{device_id}/capacity-status
+POST   /v1/devices/{device_id}/capacity-reassessments
+GET    /v1/workload-profiles
+POST   /v1/workload-profiles
 GET    /v1/benchmark-profiles
 POST   /v1/benchmark-profiles
+POST   /v1/benchmark-profiles/{id}/submit
+POST   /v1/benchmark-profiles/{id}/approve
+POST   /v1/benchmark-profiles/{id}/retire
+POST   /v1/capacity-assessments/{id}/recommendation-selections
+POST   /v1/capacity-assessments/{id}/override-requests
+POST   /v1/capacity-overrides/{id}/approve
 ~~~
+
+Capacity endpoints must distinguish central advisory assessment from device-local authoritative validation/receipt.
 
 ## Marketplace, trials and purchase
 
