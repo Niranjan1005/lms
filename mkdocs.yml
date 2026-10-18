@@ -86,10 +86,13 @@ nav:
       - Deployment Models: architecture/deployment-models.md
       - State Machines: architecture/state-machines.md
       - Sequence Diagrams: architecture/sequence-diagrams.md
+      - Configuration Hierarchy: architecture/configuration-hierarchy.md
   - Licensing:
       - Overview: licensing/index.md
       - Entitlements & Allocations: licensing/entitlements.md
       - Grants: licensing/grants.md
+      - Dynamic Policy Model: licensing/policy-model.md
+      - Signed Grant Format: licensing/grant-format.md
       - Trials & Add-ons: licensing/trials-addons.md
       - Renewal & Offline Validity: licensing/renewal.md
   - Marketplace & OTA:
@@ -119,6 +122,7 @@ nav:
       - Approval Workflows: backend/approval-workflows.md
       - Audit Event Catalogue: backend/audit-event-catalog.md
       - Indexing & Concurrency: backend/indexing-concurrency.md
+      - Database Migration Policy: backend/migration-policy.md
       - Observability & SLOs: backend/observability-slos.md
   - Edge Application:
       - Overview: edge/index.md
@@ -140,13 +144,18 @@ nav:
       - Definition of Ready / Done: qa/definition-of-ready-done.md
       - Acceptance Criteria by Phase: qa/acceptance-criteria-by-phase.md
       - Critical Flow Test Matrix: qa/critical-flow-test-matrix.md
+  - Telemetry:
+      - Usage Telemetry Schema: telemetry/schema.md
   - Operations:
       - Backup & Recovery: operations/backup-recovery.md
+      - Customer-Hosted Topology: operations/customer-hosted-topology.md
+      - Environment Standards: operations/environment-standards.md
       - Monitoring & ERP: operations/monitoring-erp.md
       - Notifications: operations/notifications.md
       - Incident Response: operations/incident-response.md
       - Disaster Recovery: operations/disaster-recovery.md
       - Runbook Baseline: operations/runbook-baseline.md
+      - Support Runbooks: operations/support-runbooks.md
   - Integrations:
       - ERP Contract: integrations/erp-contract.md
   - Support:
@@ -154,6 +163,7 @@ nav:
   - Governance:
       - Team RACI: governance/raci.md
       - Standards: governance/standards.md
+      - Handbook Status & Ownership: governance/handbook-status.md
       - Change Control: governance/change-control.md
       - Release Approval SOP: governance/release-approval-sop.md
       - Git & PR Standards: governance/git-pr-standards.md
@@ -162,6 +172,12 @@ nav:
       - ADR-002 Modular Monolith: adr/002-modular-monolith.md
       - ADR-003 Marketplace in LMS: adr/003-marketplace-in-lms.md
       - ADR-004 Traditional Releases: adr/004-traditional-releases.md
+      - ADR-005 Device Identity: adr/005-device-identity.md
+      - ADR-006 Separate Signing Keys: adr/006-separate-signing-keys.md
+      - ADR-007 Offline Request/Response: adr/007-offline-request-response.md
+      - ADR-008 Production Authentication: adr/008-production-authentication.md
+      - ADR-009 Model Key Wrapping: adr/009-model-key-wrapping.md
+      - ADR-010 Package Format: adr/010-package-format.md
   - Delivery:
       - Implementation Phases: delivery/phases.md
       - Open Decisions: delivery/open-decisions.md
