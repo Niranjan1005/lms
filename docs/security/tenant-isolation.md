@@ -1,27 +1,53 @@
 # Tenant Isolation Standard
 
-SaaS mode is multi-tenant. Cross-tenant disclosure or mutation is treated as a security-critical defect.
+SaaS mode is multi-tenant. Cross-tenant disclosure or mutation is a security-critical defect and release blocker. Customer-hosted mode keeps the same tenant-aware code paths even when deployed for one customer.
 
-## Enforcement model
+## Isolation model
+Every business object either carries `customer_id` directly or has an enforceable ownership path to one. Authorization resolves caller permissions and tenant/object scope before repository/service mutation or response serialization.
 
-Every business object is associated with a customer/tenant directly or through a verified ownership path. Authorization resolves caller scope before repository/service operations.
+## Enforcement layers
+### API/service
+- never accept `customer_id` or object ID as proof of access
+- resolve principal permissions + permitted customer/site/device scope
+- avoid leaking unauthorized object existence where appropriate
 
-## Rules
+### Repository/data access
+- tenant-scoped repository methods require explicit scope context
+- joins used for indirect ownership are validated
+- unscoped/global query APIs are restricted to explicit privileged paths
 
-- Never accept `customer_id` as proof of access.
-- Repository methods for tenant data require explicit scope/context.
-- Background jobs carry tenant identity with the job payload.
-- Audit queries are tenant-scoped unless caller has explicit global audit permission.
-- Artifact/deployment targets are validated against customer ownership before delivery.
-- Customer-hosted mode may be single-customer, but code paths remain compatible with tenant checks.
+### Async/jobs
+- job/outbox payload includes tenant/customer scope
+- worker re-resolves referenced objects before action
+- missing scope is a failure, not 'all tenants'
 
-## Required tests
+### Artifact/deployment/offline
+- deployment targets must belong to permitted customer/product context
+- offline requests cannot obtain another tenant's grant/artifact
+- temporary artifact URLs are short-lived/scoped where used
 
-1. user from Customer A cannot read Customer B object by ID
-2. user from A cannot enumerate B through filters/search
-3. user from A cannot mutate B using guessed IDs
-4. background jobs cannot cross tenant due to missing scope
-5. offline request for one customer cannot obtain another customer's grant/artifact
-6. support/global roles are tested for both allowed and denied scope combinations
+### Audit/support
+- customer audit views are tenant-scoped
+- global/support access requires explicit role and is audited
+- support object IDs/deep links never bypass scope validation
 
-Tenant isolation regression tests are release blockers.
+## Required negative tests
+1. guessed-ID read
+2. enumeration through search/filter/export
+3. guessed-ID mutation
+4. cross-tenant nested object reference
+5. cross-tenant deployment/allocation target
+6. background job with wrong/missing scope
+7. offline request for another tenant
+8. audit/export leakage
+9. support/global overreach
+10. cache key/response mix-up
+
+## Database/RLS
+Application authorization is mandatory regardless of whether PostgreSQL Row-Level Security is later adopted. RLS may provide defense-in-depth but is not the sole isolation mechanism.
+
+## Observability and incident handling
+Authorization denials are measured. Suspected cross-tenant patterns alert Security. Any confirmed/suspected disclosure follows the tenant-isolation incident playbook and requires regression tests before closure.
+
+## Related SDR/ADR
+`SDR-BE-009`, `SDR-SEC-001`, `SDR-SEC-007`; ADR-016
