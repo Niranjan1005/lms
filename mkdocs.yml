@@ -111,9 +111,14 @@ nav:
       - Versioning & Compatibility: marketplace-ota/versioning-compatibility.md
   - Capacity:
       - Overview: capacity/index.md
+      - Status Model: capacity/status-model.md
       - Inventory & Benchmarking: capacity/inventory-benchmarking.md
+      - Workload Model: capacity/workload-model.md
+      - Benchmark Governance: capacity/benchmark-governance.md
       - Combined Workload Planning: capacity/planning.md
       - Capacity Authority & Recommendations: capacity/authority-and-recommendations.md
+      - Decision & Override Policy: capacity/decision-and-override-policy.md
+      - Reassessment & Monitoring: capacity/reassessment-monitoring.md
   - Portal:
       - Information Architecture: portal/information-architecture.md
   - Backend:
