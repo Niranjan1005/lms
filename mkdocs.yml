@@ -217,6 +217,14 @@ nav:
       - ADR-008 Production Authentication: adr/008-production-authentication.md
       - ADR-009 Model Key Wrapping: adr/009-model-key-wrapping.md
       - ADR-010 Package Format: adr/010-package-format.md
+      - ADR-011 Three License Clocks: adr/011-three-license-clocks.md
+      - ADR-012 Capacity Authority: adr/012-capacity-authority.md
+      - ADR-013 Transactional Outbox: adr/013-transactional-outbox.md
+      - ADR-014 Artifact Storage: adr/014-artifact-storage.md
+      - ADR-015 Release Set Rollback: adr/015-release-set-rollback.md
+      - ADR-016 Tenant Isolation: adr/016-tenant-isolation.md
+      - ADR-017 Telemetry Separation: adr/017-telemetry-separation.md
+      - ADR-018 Same Codebase Deployment: adr/018-same-codebase-deployment.md
   - Delivery:
       - Implementation Phases: delivery/phases.md
       - Open Decisions: delivery/open-decisions.md
