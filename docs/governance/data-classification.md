@@ -1,22 +1,49 @@
 # Data Classification & Handling
 
+Classification determines where LMS information may be stored, logged, exported and shared. Classification applies to documents, database fields, logs, backups, support bundles and offline packages.
+
 ## Classes
 
 | Class | Examples | Handling baseline |
 |---|---|---|
-| Public | approved public product docs | may be shared externally |
-| Internal | architecture, roadmaps, operational metrics | company/internal access |
-| Confidential | customer/device inventories, entitlement details, audit exports | restricted need-to-know |
-| Highly Restricted | signing private keys, credentials, model content keys, incident secrets | dedicated protected systems; never normal docs/logs |
+| Public | approved public product material | externally shareable after publication approval |
+| Internal | architecture, roadmaps, non-customer operational metrics | company/internal authorized access |
+| Confidential | customer/device inventories, entitlement details, audit exports, deployment metadata | need-to-know, scoped access, encrypted transport/storage controls |
+| Highly Restricted | signing private keys, passwords/tokens, model content keys, security incident secrets | dedicated protected systems; never normal docs/logs/tickets |
 
-## Repository rule
+## Default classification examples
 
-This private handbook may contain Internal and selected Confidential design information, but never secrets, credentials, private keys, decrypted proprietary models or raw sensitive incident/customer exports.
+- customer/site/device topology: Confidential
+- entitlement/allocation/grant metadata: Confidential
+- signed grant artifact: Confidential unless product policy classifies differently
+- audit/security export: Confidential
+- source architecture handbook: Internal
+- model binary/IP: Confidential or Highly Restricted according to owner policy
+- private signing key / KEK / unwrapped DEK: Highly Restricted
+- authentication token/password: Highly Restricted
 
-## Logging rule
+## Storage rules
 
-Logs should contain identifiers and references, not full sensitive payloads unless explicitly approved for a secure diagnostic channel.
+Highly Restricted key/credential material is stored only in approved key/secret systems and is never copied into PostgreSQL business tables, documentation or ordinary support archives.
 
-## Export rule
+Confidential data in PostgreSQL/artifact storage/backups uses deployment-appropriate access control and encryption-at-rest capabilities.
 
-Audit/report exports must enforce caller scope and may require additional approval depending on customer data sensitivity.
+## Logging
+
+Logs prefer identifiers/references over full payloads. Highly Restricted values are always redacted. Confidential payload details are logged only when explicitly justified in an approved secure diagnostic path.
+
+## Export and support bundles
+
+Exports enforce tenant/object scope. Sensitive global exports may require privileged approval. Support bundles must minimize data and exclude secrets/private keys/decrypted model material.
+
+## Lower-environment data
+
+Production customer data/backups are not copied into development/QA by default. Any approved lower-environment use requires sanitization/anonymization appropriate to classification.
+
+## Retention/deletion
+
+Retention follows audit/business/compliance policy by data class. Legal/security hold overrides normal deletion. Backup copies follow their own managed retention lifecycle.
+
+## Incident rule
+
+Suspected unauthorized disclosure of Confidential or Highly Restricted information triggers security incident triage according to impact and scope.
