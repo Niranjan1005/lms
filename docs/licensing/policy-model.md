@@ -1,22 +1,36 @@
 # Dynamic License Policy Model
 
-The license system must avoid feature-specific columns such as `ppe_enabled`. Rights are represented by generic grants, constraints and dependencies.
+The licensing model is generic and data-driven. New features/products should normally be onboarded through catalog/policy/constraint metadata rather than adding feature-specific schema columns or hard-coded licensing branches.
 
-## Grant model
+## Grant policy inputs
+
+Effective grant policy is derived from:
+- product/feature catalog definition
+- customer entitlement item
+- allocation
+- term type and dates
+- product/customer/site/device policy hierarchy
+- trial/campaign rules
+- base/add-on dependencies
+- update-right policy
+- approved exceptions/overrides
+
+## Generic grant shape
 
 A grant contains:
-- subject scope: customer/product/device/site
+- subject: customer/product/device and optional site constraints
 - capability code
-- grant type: base/add-on/trial/perpetual/subscription
-- quantity/limit constraints
-- valid-from / valid-until
+- grant type: base/add-on/trial/subscription/perpetual
+- constraints
+- commercial validity
 - offline/grace policy
-- revision and supersession
+- revision/supersession
 - dependencies
 - update-right policy
+- policy/source revisions
 - signature metadata
 
-## Constraint examples
+## Constraint model
 
 ~~~json
 [
@@ -26,9 +40,17 @@ A grant contains:
 ]
 ~~~
 
-## Update-right policy
+Supported operators/types are allowlisted/versioned. Unknown security-critical constraint operators are rejected rather than ignored.
 
-Preferred explicit schema:
+## Constraint resolution
+
+Constraints from entitlement/allocation/policy are combined conservatively: lower-scope configuration cannot expand commercial quantity beyond the entitlement/allocation; security minima cannot be relaxed by ordinary policy override.
+
+## Dependencies
+
+A capability may require base capabilities/grants. Dependency state is evaluated at runtime; a dependent add-on becomes dormant when required base authorization is inactive unless product policy explicitly marks it independent.
+
+## Update rights
 
 ~~~json
 {
@@ -38,8 +60,20 @@ Preferred explicit schema:
 }
 ~~~
 
-Supported modes may include `unlimited`, `during_active_term`, `remaining_major_updates`, `until_version`, and `none`.
+Supported modes include `unlimited`, `during_active_term`, `remaining_major_updates`, `until_version`, and `none`. Update Manager checks update rights separately from feature execution rights.
 
-## Dependency semantics
+## Trials
 
-Dependent add-ons become dormant when required base grants are not active unless explicitly marked independent by policy.
+Trial policy adds eligibility, activation-start behavior and duration but still produces a normal signed time-limited grant. Trial state is not a special UI-only boolean.
+
+## Policy snapshot/audit
+
+Grant issuance records the relevant resolved policy/source revisions so support can explain why a grant was produced. Sensitive override source/approval is auditable.
+
+## Extensibility rule
+
+Adding a new feature quantity type should require a registered constraint schema/validator and runtime enforcement support; it should not require new `feature_x_enabled` DB columns.
+
+## Related SDR
+
+`SDR-LIC-005`, `SDR-LIC-006`, `SDR-LIC-010`, `SDR-TRL-*`
