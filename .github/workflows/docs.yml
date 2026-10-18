@@ -1,4 +1,4 @@
-name: Build MkDocs Handbook
+name: Build & Publish MkDocs Handbook
 
 on:
   push:
@@ -7,20 +7,27 @@ on:
     branches: [main]
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
-  build:
+  docs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: "3.12"
           cache: pip
+
       - name: Install dependencies
         run: pip install -r requirements.txt
-      - name: Build handbook
+
+      - name: Validate handbook
         run: mkdocs build --strict
+
+      - name: Publish to gh-pages
+        if: github.event_name == 'push'
+        run: mkdocs gh-deploy --force
