@@ -1,27 +1,42 @@
 # Environment Standards
 
-## Environment classes
+Environment separation prevents test code/data/keys from becoming production authority and ensures release evidence is reproducible.
 
-| Environment | Purpose | Data rule | Release channels |
-|---|---|---|---|
-| Local Dev | developer iteration | synthetic only | Development |
-| Integration | service/edge integration | synthetic/test | Development/QA |
-| QA | formal validation | synthetic/anonymized | QA/Internal |
-| Staging | production-like readiness | anonymized/approved | Internal/Stable candidate |
-| Production | customer service | real customer data | Stable/LTS only |
+## Environment classes
+| Environment | Purpose | Data rule | Release channels | Signing |
+|---|---|---|---|---|
+| Local Dev | developer iteration | synthetic only | Development | developer-only keys |
+| Integration | API/edge/integration tests | synthetic/test | Development/QA | test keys/provider |
+| QA | formal functional/regression | synthetic/anonymized | QA/Internal | non-production signing |
+| Staging | production-like readiness | anonymized/approved | Internal/Stable candidate | isolated staging keys |
+| Production | customer service | real customer data | Stable/LTS | production protected provider |
 
 ## Separation requirements
-
-- Separate credentials and secrets per environment.
-- Production signing keys are never available in lower environments.
-- Development/QA artifacts cannot be promoted implicitly into production; promotion creates explicit approved release state.
-- Test tenants/devices are clearly marked.
-- Production backups are not restored into lower environments without approved sanitization.
+- separate credentials/secrets per environment
+- production signing keys never available in lower environments
+- production DB credentials never valid in lower environments
+- test tenants/devices visibly marked and cannot target production signing/deployment by accident
+- environment-specific artifact repositories or strong namespace/policy separation
+- production backups not restored to lower environments without approved sanitization
+- release promotion records exact source artifact/build rather than rebuilding ad hoc in production
 
 ## Configuration
+Configuration is provided through environment/deployment/secret manager. Environment-specific values include DB, artifact provider, signing provider, auth/IdP, email, telemetry, external integrations, public URL, CORS/headers and monitoring endpoints.
 
-Configuration is supplied through environment/secret manager/deployment configuration, never hard-coded. Environment-specific settings include DB connection, artifact storage, signing provider, email provider, telemetry endpoints and auth mode.
+## Production guardrails
+Production mode SHALL fail startup/readiness for dangerous conditions such as known development signing configuration, default/insecure secret, disabled TLS validation on external connections, or unsupported schema version where detectable.
+
+## Networking
+Lower environments do not require access to production databases, KMS/HSM or customer networks. Production admin/service interfaces follow deployment security/network policy.
 
 ## Time
+All environments use reliable time synchronization for realistic expiry/signature testing. Persist UTC; site timezone is used for scheduling/display only.
 
-All servers use reliable time synchronization. Persist timestamps in UTC. Site timezone is used for display and maintenance-window interpretation.
+## Data refresh
+Synthetic seed data is preferred. Sanitized production-derived datasets require explicit approval and repeatable sanitization so Confidential/Highly Restricted fields do not leak.
+
+## Environment parity
+Staging should exercise the same package, migration and provider interfaces as production even when scaled down. Differences are documented and considered during release approval.
+
+## Access review
+Production human/service access is narrower than lower environments and periodically reviewed; emergency access follows break-glass policy.
