@@ -1,37 +1,64 @@
 # Signing Key Rotation & Recovery
 
-License-signing and release-signing keys have separate lifecycle and trust purpose.
+License-signing and release-signing keys are separate trust purposes with independently auditable lifecycle. Model KEKs/wrapping keys follow their own security design but use the same governance principles.
 
 ## Key states
-
 ~~~text
-GENERATED -> ACTIVE -> RETIRING -> RETIRED -> DESTROYED
+GENERATED -> VALIDATED -> ACTIVE -> RETIRING -> RETIRED -> DESTROYED
+                         |
+                         +-> COMPROMISED / REVOKED
 ~~~
 
-Compromised keys may enter `REVOKED/COMPROMISED` through emergency procedure.
+## Key metadata
+
+Track key ID, purpose, algorithm, provider reference, created/activated/retiring/retired timestamps, status, owner, trust-bundle version and approval references. Raw private key material is not stored in LMS metadata.
+
+## Generation
+
+Production key generation occurs inside KMS/HSM/equivalent protected provider using approved algorithm/profile. Creation and activation are distinct actions where provider/process permits.
 
 ## Rotation
 
-1. Generate new key in protected provider.
-2. Distribute/ship new public verification key or trust bundle before first use.
-3. Mark new key active for signing.
-4. Keep old public key trusted for the planned verification window.
-5. Stop issuing new artifacts with retiring key.
-6. Retire old key after compatible clients have received trust updates.
+1. generate/validate new key
+2. publish/distribute new public verification key in trust bundle
+3. confirm supported online/offline edge versions can trust it
+4. maker-checker activate new signing key
+5. stop new issuance with old key; mark Retiring
+6. retain old public key for verification overlap
+7. retire old key after planned artifact/grant/support window
+8. eventually destroy private key according to retention/compliance policy
+
+## Trust-bundle distribution
+
+Trust bundle is versioned and itself delivered through an authenticated/signed update path. Devices report trust-bundle version/key IDs so support can distinguish unknown-key from invalid-signature failures.
+
+## Offline considerations
+
+Air-gapped devices may miss rotation updates. Rotation plan therefore accounts for overlap long enough to distribute trust state through offline packages, or uses a controlled compatibility/recovery path. Emergency compromise may require stricter blocking despite offline impact.
 
 ## Recovery
 
-Private-key recovery uses KMS/HSM/provider-specific protected mechanisms and is separated from normal database backup. Recovery exercises must not export raw private material unless the approved provider procedure explicitly requires a protected escrow mechanism.
+Private-key recovery uses provider-specific protected backup/replication/escrow mechanisms. It is separate from normal DB backup. Recovery drills verify operational procedure without exporting raw key material into ordinary files.
 
 ## Compromise response
 
-- stop signing with affected key immediately
-- identify grants/releases signed with the key
-- activate replacement key/trust bundle
-- assess offline devices that may not receive trust updates immediately
-- supersede/revoke affected artifacts where necessary
-- preserve audit evidence and run security incident process
+- stop signing with affected key
+- mark key compromised/revoked in central trust policy
+- identify grants/releases signed during exposure window
+- activate replacement key
+- distribute updated trust bundle
+- supersede/revoke/reissue affected artifacts where required
+- assess offline devices and support impact
+- preserve evidence and run Security incident process
 
-## Trust-store versioning
+## Algorithm migration
 
-Edge verification components record trust-store version and key IDs so support can distinguish unknown-key failures from invalid signatures.
+Signed artifacts carry algorithm and key ID. Introducing a new algorithm uses a versioned overlap/migration plan rather than silently changing verification semantics.
+
+## Separation of duties
+
+Key activation/rotation/revocation is privileged, maker-checker controlled and audited. Application administrators do not automatically gain KMS/HSM key-administration rights.
+
+## Related SDR/ADR
+
+`SDR-SEC-003`, `SDR-SEC-004`; ADR-006
