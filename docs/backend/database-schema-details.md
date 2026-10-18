@@ -29,11 +29,14 @@ The logical model is normalized around commercial truth, device identity, eviden
 
 | Table | Key fields | Notes |
 |---|---|---|
-| device_hardware_inventory | inventory_id, device_id, collected_at, schema_version, cpu_json, gpu_json, memory_json, storage_json, os_runtime_json | Stable profile snapshot. |
-| device_resource_snapshots | snapshot_id, device_id, captured_at, ram_available, gpu_utilization, temperature, active_streams | Dynamic telemetry snapshot. |
-| benchmark_profiles | benchmark_id, hardware_class, feature/model/runtime dimensions, metrics_json, version | Measured evidence. |
-| workload_profiles | workload_id, feature/model/resolution/fps/backend parameters | Reusable workload definition. |
-| capacity_assessments | assessment_id, device_id, workload_id, benchmark_version, result, reasons_json, assessed_at | Decision evidence. |
+| device_hardware_inventory | inventory_id, device_id, collected_at, schema_version, cpu_json, gpu_json, memory_json, storage_json, os_runtime_json, inventory_hash | Stable/versioned profile snapshot. |
+| device_resource_snapshots | snapshot_id, device_id, captured_at, ram_available, gpu_utilization, gpu_memory_used, temperature, active_streams, workload_hash | Dynamic runtime evidence. |
+| workload_profiles | workload_id, device_id/site_id, feature_id, model_id/version, camera_count, resolution, fps, codec, decode_path, backend, precision, target_json, workload_hash | Reproducible workload definition. |
+| benchmark_profiles | benchmark_id, hardware_class, feature_id, model_id/version, runtime_dimensions_json, workload_dimensions_json, metrics_json, thresholds_json, confidence_class, version, status | Governed measured evidence. |
+| benchmark_profile_approvals | approval_id, benchmark_id, requester_id, approver_id, status, approved_at | Maker-checker/evidence lifecycle where required. |
+| capacity_assessments | assessment_id, device_id, inventory_id, resource_snapshot_id, workload_hash, benchmark_version, result, limiting_resources_json, compatibility_json, headroom_json, confidence, recommendations_json, assessed_at, stale_at | Central/local assessment evidence. |
+| capacity_recommendation_selections | selection_id, assessment_id, selected_option_json, actor_id, selected_at | Records operator-selected active configuration. |
+| capacity_overrides | override_id, assessment_id, device_id, workload_hash, reason, requester_id, approver_id, valid_until, status | Exceptional, scoped, auditable override. |
 
 ## Marketplace, release and OTA
 
