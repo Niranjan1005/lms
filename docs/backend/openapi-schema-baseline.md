@@ -93,6 +93,59 @@ All identifiers are opaque strings with stable prefixes. Examples: `cust_`, `sit
 
 Allocation is validated and committed as one business operation. Result contains new entitlement/allocation revisions and affected grant issuance status.
 
+## Capacity assessment response
+
+~~~json
+{
+  "data": {
+    "assessment_id": "cap_610",
+    "authority": "central_advisory",
+    "result": "warning",
+    "freshness": "current",
+    "compatibility": {"status": "compatible", "blockers": []},
+    "limiting_resources": [
+      {"resource": "gpu_compute", "headroom_percent": 8.5}
+    ],
+    "benchmark": {
+      "profile_id": "bp_220",
+      "version": "2026.10",
+      "confidence": "high"
+    },
+    "workload": {
+      "hash": "sha256:...",
+      "existing": [{"feature_id": "people_counting", "camera_count": 8}],
+      "proposed": [{"feature_id": "ppe_detection", "camera_count": 4}]
+    },
+    "recommendations": [
+      {
+        "recommendation_id": "rec_1",
+        "type": "reduce_active_cameras",
+        "configuration": {"ppe_detection": 2},
+        "reason_code": "CAP_GPU_COMPUTE_BELOW_TARGET"
+      }
+    ],
+    "local_revalidation_required": true
+  },
+  "meta": {"request_id": "req_...", "api_version": "v1"}
+}
+~~~
+
+A local assessment/receipt should use the same core result model but identify `authority: local_authoritative` and include the actual installed release/model/runtime context.
+
+## Capacity recommendation selection
+
+`POST /v1/capacity-assessments/{assessment_id}/recommendation-selections`
+
+~~~json
+{
+  "recommendation_id": "rec_1",
+  "selected_configuration": {
+    "people_counting": {"camera_count": 8, "fps": 10},
+    "ppe_detection": {"camera_count": 2, "fps": 10}
+  },
+  "reason": "customer selected configuration"
+}
+~~~
 ## Check-in request
 
 ~~~json
