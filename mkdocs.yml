@@ -82,12 +82,14 @@ nav:
       - Goals & Non-Goals: product/goals.md
       - Terminology: product/terminology.md
       - Decisions: product/decisions.md
+      - Consolidated Business Rules: product/business-rules.md
   - Architecture:
       - Overview: architecture/index.md
       - Trust Boundaries: architecture/trust-boundaries.md
       - Deployment Models: architecture/deployment-models.md
       - State Machines: architecture/state-machines.md
       - Sequence Diagrams: architecture/sequence-diagrams.md
+      - Artifact Storage: architecture/artifact-storage.md
       - Configuration Hierarchy: architecture/configuration-hierarchy.md
   - Licensing:
       - Overview: licensing/index.md
@@ -96,6 +98,7 @@ nav:
       - Dynamic Policy Model: licensing/policy-model.md
       - Signed Grant Format: licensing/grant-format.md
       - Trials & Add-ons: licensing/trials-addons.md
+      - Device Lifecycle: licensing/device-lifecycle.md
       - Renewal & Offline Validity: licensing/renewal.md
   - Marketplace & OTA:
       - Overview: marketplace-ota/index.md
@@ -110,6 +113,9 @@ nav:
       - Overview: capacity/index.md
       - Inventory & Benchmarking: capacity/inventory-benchmarking.md
       - Combined Workload Planning: capacity/planning.md
+      - Capacity Authority & Recommendations: capacity/authority-and-recommendations.md
+  - Portal:
+      - Information Architecture: portal/information-architecture.md
   - Backend:
       - Overview: backend/index.md
       - Database Design: backend/database.md
@@ -143,6 +149,7 @@ nav:
       - Security Control Baseline: security/security-control-baseline.md
       - Secure Coding Standard: security/secure-coding-standard.md
       - Tenant Isolation: security/tenant-isolation.md
+      - Relay Security: security/relay-security.md
   - QA & Release:
       - Test Strategy: qa/test-strategy.md
       - Release Readiness: qa/release-readiness.md
@@ -172,6 +179,7 @@ nav:
       - Standards: governance/standards.md
       - Handbook Status & Ownership: governance/handbook-status.md
       - Data Classification: governance/data-classification.md
+      - Requirements Coverage Audit: governance/requirements-coverage-audit.md
       - Decision Gates: governance/decision-gates.md
       - Change Control: governance/change-control.md
       - Release Approval SOP: governance/release-approval-sop.md
