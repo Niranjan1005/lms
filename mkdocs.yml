@@ -112,6 +112,8 @@ nav:
       - Detailed Modules: backend/modules-detailed.md
       - API Contract Baseline: backend/api-contracts.md
       - API Endpoint Catalogue: backend/api-catalog.md
+      - OpenAPI Schema Baseline: backend/openapi-schema-baseline.md
+      - Transactional Outbox & Events: backend/outbox-events.md
       - Error Model: backend/error-model.md
       - RBAC & Permissions: backend/rbac-permissions.md
       - Approval Workflows: backend/approval-workflows.md
@@ -137,15 +139,24 @@ nav:
       - Release Readiness: qa/release-readiness.md
       - Definition of Ready / Done: qa/definition-of-ready-done.md
       - Acceptance Criteria by Phase: qa/acceptance-criteria-by-phase.md
+      - Critical Flow Test Matrix: qa/critical-flow-test-matrix.md
   - Operations:
       - Backup & Recovery: operations/backup-recovery.md
       - Monitoring & ERP: operations/monitoring-erp.md
+      - Notifications: operations/notifications.md
+      - Incident Response: operations/incident-response.md
       - Disaster Recovery: operations/disaster-recovery.md
       - Runbook Baseline: operations/runbook-baseline.md
+  - Integrations:
+      - ERP Contract: integrations/erp-contract.md
+  - Support:
+      - Error Code Catalogue: support/error-code-catalog.md
   - Governance:
       - Team RACI: governance/raci.md
       - Standards: governance/standards.md
       - Change Control: governance/change-control.md
+      - Release Approval SOP: governance/release-approval-sop.md
+      - Git & PR Standards: governance/git-pr-standards.md
       - ADR Index: adr/index.md
       - ADR-001 Signed Grants: adr/001-signed-grants.md
       - ADR-002 Modular Monolith: adr/002-modular-monolith.md
