@@ -86,6 +86,7 @@ nav:
       - Consolidated Business Rules: product/business-rules.md
   - Architecture:
       - Overview: architecture/index.md
+      - System Design Requirements (SDR): architecture/system-design-requirements.md
       - System Context: architecture/system-context.md
       - Trust Boundaries: architecture/trust-boundaries.md
       - Deployment Models: architecture/deployment-models.md
