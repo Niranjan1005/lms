@@ -1,0 +1,132 @@
+site_name: LMS Engineering Handbook
+site_description: Internal engineering handbook for the License, Marketplace & Edge Lifecycle Management Platform
+site_author: Engineering
+repo_url: https://github.com/Niranjan1005/lms
+repo_name: Niranjan1005/lms
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+  palette:
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: blue
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  icon:
+    repo: fontawesome/brands/github
+    logo: material/shield-key-outline
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - Product & Scope:
+      - Overview: product/index.md
+      - Goals & Non-Goals: product/goals.md
+      - Terminology: product/terminology.md
+      - Decisions: product/decisions.md
+  - Architecture:
+      - Overview: architecture/index.md
+      - Trust Boundaries: architecture/trust-boundaries.md
+      - Deployment Models: architecture/deployment-models.md
+      - State Machines: architecture/state-machines.md
+  - Licensing:
+      - Overview: licensing/index.md
+      - Entitlements & Allocations: licensing/entitlements.md
+      - Grants: licensing/grants.md
+      - Trials & Add-ons: licensing/trials-addons.md
+      - Renewal & Offline Validity: licensing/renewal.md
+  - Marketplace & OTA:
+      - Overview: marketplace-ota/index.md
+      - Release Management: marketplace-ota/releases.md
+      - Model OTA: marketplace-ota/model-ota.md
+      - Deployment & Rollback: marketplace-ota/deployment.md
+  - Capacity:
+      - Overview: capacity/index.md
+      - Inventory & Benchmarking: capacity/inventory-benchmarking.md
+      - Combined Workload Planning: capacity/planning.md
+  - Backend:
+      - Overview: backend/index.md
+      - Database Design: backend/database.md
+      - API Standards: backend/api-standards.md
+  - Edge Application:
+      - Overview: edge/index.md
+      - License Agent: edge/license-agent.md
+      - Update Manager: edge/update-manager.md
+  - Security:
+      - Overview: security/index.md
+      - Signing & Model Protection: security/signing-models.md
+      - Threat Model & VAPT: security/threat-vapt.md
+  - QA & Release:
+      - Test Strategy: qa/test-strategy.md
+      - Release Readiness: qa/release-readiness.md
+  - Operations:
+      - Backup & Recovery: operations/backup-recovery.md
+      - Monitoring & ERP: operations/monitoring-erp.md
+  - Governance:
+      - Team RACI: governance/raci.md
+      - Standards: governance/standards.md
+      - ADR Index: adr/index.md
+      - ADR-001 Signed Grants: adr/001-signed-grants.md
+      - ADR-002 Modular Monolith: adr/002-modular-monolith.md
+      - ADR-003 Marketplace in LMS: adr/003-marketplace-in-lms.md
+      - ADR-004 Traditional Releases: adr/004-traditional-releases.md
+  - Delivery:
+      - Implementation Phases: delivery/phases.md
+      - Open Decisions: delivery/open-decisions.md
+      - Readiness Checklist: delivery/readiness-checklist.md
