@@ -29,9 +29,19 @@ POST   /v1/grants/{id}/revoke
 GET    /v1/devices/{device_id}/grants
 </code></pre></div> <h2 id=capacity>Capacity<a class=headerlink href=#capacity title="Permanent link">&para;</a></h2> <div class=highlight><pre><span></span><code>POST   /v1/devices/{device_id}/capacity-assessments
 GET    /v1/devices/{device_id}/capacity-assessments
+GET    /v1/devices/{device_id}/capacity-status
+POST   /v1/devices/{device_id}/capacity-reassessments
+GET    /v1/workload-profiles
+POST   /v1/workload-profiles
 GET    /v1/benchmark-profiles
 POST   /v1/benchmark-profiles
-</code></pre></div> <h2 id=marketplace-trials-and-purchase>Marketplace, trials and purchase<a class=headerlink href=#marketplace-trials-and-purchase title="Permanent link">&para;</a></h2> <div class=highlight><pre><span></span><code>GET    /v1/marketplace/features
+POST   /v1/benchmark-profiles/{id}/submit
+POST   /v1/benchmark-profiles/{id}/approve
+POST   /v1/benchmark-profiles/{id}/retire
+POST   /v1/capacity-assessments/{id}/recommendation-selections
+POST   /v1/capacity-assessments/{id}/override-requests
+POST   /v1/capacity-overrides/{id}/approve
+</code></pre></div> <p>Capacity endpoints must distinguish central advisory assessment from device-local authoritative validation/receipt.</p> <h2 id=marketplace-trials-and-purchase>Marketplace, trials and purchase<a class=headerlink href=#marketplace-trials-and-purchase title="Permanent link">&para;</a></h2> <div class=highlight><pre><span></span><code>GET    /v1/marketplace/features
 GET    /v1/marketplace/features/{feature_id}
 POST   /v1/trials
 POST   /v1/purchase-requests
