@@ -95,8 +95,11 @@ nav:
   - Marketplace & OTA:
       - Overview: marketplace-ota/index.md
       - Release Management: marketplace-ota/releases.md
+      - Release Manifest Schema: marketplace-ota/release-manifest-schema.md
       - Model OTA: marketplace-ota/model-ota.md
+      - Model Manifest Schema: marketplace-ota/model-manifest-schema.md
       - Deployment & Rollback: marketplace-ota/deployment.md
+      - Deployment State Machine: marketplace-ota/deployment-state-machine.md
   - Capacity:
       - Overview: capacity/index.md
       - Inventory & Benchmarking: capacity/inventory-benchmarking.md
@@ -106,13 +109,20 @@ nav:
       - Database Design: backend/database.md
       - Detailed Schema Baseline: backend/database-schema-details.md
       - API Standards: backend/api-standards.md
+      - Detailed Modules: backend/modules-detailed.md
       - API Contract Baseline: backend/api-contracts.md
+      - API Endpoint Catalogue: backend/api-catalog.md
       - Error Model: backend/error-model.md
+      - RBAC & Permissions: backend/rbac-permissions.md
       - Approval Workflows: backend/approval-workflows.md
+      - Audit Event Catalogue: backend/audit-event-catalog.md
+      - Indexing & Concurrency: backend/indexing-concurrency.md
       - Observability & SLOs: backend/observability-slos.md
   - Edge Application:
       - Overview: edge/index.md
+      - Device Identity: edge/device-identity.md
       - License Agent: edge/license-agent.md
+      - Local Interfaces: edge/local-interfaces.md
       - Update Manager: edge/update-manager.md
       - Offline Workflows: edge/offline-workflows.md
       - Release Set & Rollback: edge/release-set.md
@@ -121,14 +131,17 @@ nav:
       - Signing & Model Protection: security/signing-models.md
       - Threat Model & VAPT: security/threat-vapt.md
       - Privileged Action Matrix: security/approval-matrix.md
+      - Security Control Baseline: security/security-control-baseline.md
   - QA & Release:
       - Test Strategy: qa/test-strategy.md
       - Release Readiness: qa/release-readiness.md
       - Definition of Ready / Done: qa/definition-of-ready-done.md
+      - Acceptance Criteria by Phase: qa/acceptance-criteria-by-phase.md
   - Operations:
       - Backup & Recovery: operations/backup-recovery.md
       - Monitoring & ERP: operations/monitoring-erp.md
       - Disaster Recovery: operations/disaster-recovery.md
+      - Runbook Baseline: operations/runbook-baseline.md
   - Governance:
       - Team RACI: governance/raci.md
       - Standards: governance/standards.md
@@ -141,4 +154,5 @@ nav:
   - Delivery:
       - Implementation Phases: delivery/phases.md
       - Open Decisions: delivery/open-decisions.md
+      - Work Breakdown: delivery/work-breakdown.md
       - Readiness Checklist: delivery/readiness-checklist.md
