@@ -75,6 +75,8 @@ markdown_extensions:
 
 nav:
   - Home: index.md
+  - Getting Started:
+      - Developer Setup: getting-started/developer-setup.md
   - Product & Scope:
       - Overview: product/index.md
       - Goals & Non-Goals: product/goals.md
@@ -103,6 +105,7 @@ nav:
       - Model Manifest Schema: marketplace-ota/model-manifest-schema.md
       - Deployment & Rollback: marketplace-ota/deployment.md
       - Deployment State Machine: marketplace-ota/deployment-state-machine.md
+      - Versioning & Compatibility: marketplace-ota/versioning-compatibility.md
   - Capacity:
       - Overview: capacity/index.md
       - Inventory & Benchmarking: capacity/inventory-benchmarking.md
@@ -138,6 +141,8 @@ nav:
       - Threat Model & VAPT: security/threat-vapt.md
       - Privileged Action Matrix: security/approval-matrix.md
       - Security Control Baseline: security/security-control-baseline.md
+      - Secure Coding Standard: security/secure-coding-standard.md
+      - Tenant Isolation: security/tenant-isolation.md
   - QA & Release:
       - Test Strategy: qa/test-strategy.md
       - Release Readiness: qa/release-readiness.md
@@ -148,6 +153,7 @@ nav:
       - Usage Telemetry Schema: telemetry/schema.md
   - Operations:
       - Backup & Recovery: operations/backup-recovery.md
+      - Backup Retention: operations/backup-retention.md
       - Customer-Hosted Topology: operations/customer-hosted-topology.md
       - Environment Standards: operations/environment-standards.md
       - Monitoring & ERP: operations/monitoring-erp.md
@@ -156,6 +162,7 @@ nav:
       - Disaster Recovery: operations/disaster-recovery.md
       - Runbook Baseline: operations/runbook-baseline.md
       - Support Runbooks: operations/support-runbooks.md
+      - Support Escalation: operations/support-escalation.md
   - Integrations:
       - ERP Contract: integrations/erp-contract.md
   - Support:
@@ -164,6 +171,8 @@ nav:
       - Team RACI: governance/raci.md
       - Standards: governance/standards.md
       - Handbook Status & Ownership: governance/handbook-status.md
+      - Data Classification: governance/data-classification.md
+      - Decision Gates: governance/decision-gates.md
       - Change Control: governance/change-control.md
       - Release Approval SOP: governance/release-approval-sop.md
       - Git & PR Standards: governance/git-pr-standards.md
