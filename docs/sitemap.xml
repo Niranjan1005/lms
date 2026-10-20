@@ -2,562 +2,562 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://niranjan1005.github.io/lms/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/001-signed-grants/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/002-modular-monolith/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/003-marketplace-in-lms/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/004-traditional-releases/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/005-device-identity/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/006-separate-signing-keys/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/007-offline-request-response/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/008-production-authentication/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/009-model-key-wrapping/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/010-package-format/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/011-three-license-clocks/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/012-capacity-authority/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/013-transactional-outbox/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/014-artifact-storage/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/015-release-set-rollback/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/016-tenant-isolation/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/017-telemetry-separation/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/adr/018-same-codebase-deployment/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/artifact-storage/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/configuration-hierarchy/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/deployment-models/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/sequence-diagrams/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/state-machines/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/system-context/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/system-design-requirements/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/architecture/trust-boundaries/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/api-catalog/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/api-contracts/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/api-standards/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/approval-workflows/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/audit-event-catalog/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/background-jobs/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/database-schema-details/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/database/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/error-model/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/indexing-concurrency/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/migration-policy/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/modules-detailed/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/observability-slos/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/openapi-schema-baseline/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/outbox-events/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/backend/rbac-permissions/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/authority-and-recommendations/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/benchmark-governance/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/decision-and-override-policy/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/inventory-benchmarking/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/planning/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/reassessment-monitoring/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/status-model/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/capacity/workload-model/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/delivery/open-decisions/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/delivery/phase-exit-criteria/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/delivery/phases/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/delivery/readiness-checklist/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/delivery/work-breakdown/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/device-identity/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/license-agent/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/local-interfaces/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/offline-workflows/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/release-set/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/runtime-enforcement/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/edge/update-manager/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/getting-started/developer-setup/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/getting-started/project-structure/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/change-control/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/data-classification/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/decision-gates/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/git-pr-standards/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/handbook-status/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/raci/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/release-approval-sop/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/requirements-coverage-audit/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/section-by-section-audit/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/governance/standards/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/integrations/erp-contract/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/device-lifecycle/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/entitlements/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/grant-format/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/grants/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/policy-model/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/renewal/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/licensing/trials-addons/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/deployment-state-machine/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/deployment/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/model-manifest-schema/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/model-ota/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/release-manifest-schema/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/releases/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/marketplace-ota/versioning-compatibility/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/backup-recovery/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/backup-retention/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/customer-hosted-topology/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/disaster-recovery/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/environment-standards/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/incident-response/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/lms-deployment-runbook/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/monitoring-erp/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/notifications/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/runbook-baseline/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/support-escalation/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/operations/support-runbooks/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/portal/information-architecture/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/portal/role-based-ux/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/product/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/product/business-rules/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/product/decisions/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/product/goals/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/product/terminology/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/acceptance-criteria-by-phase/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/critical-flow-test-matrix/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/definition-of-ready-done/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/performance-resilience-testing/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/release-readiness/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/qa/test-strategy/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/approval-matrix/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/edge-hardening/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/identity-session-security/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/relay-security/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/secrets-and-certificates/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/secure-coding-standard/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/security-control-baseline/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/security-logging-monitoring/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/signing-key-lifecycle/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/signing-models/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/supply-chain-security/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/tenant-isolation/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/threat-vapt/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/security/vulnerability-management/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/support/error-code-catalog/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/telemetry/delivery-retention/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
     <url>
          <loc>https://niranjan1005.github.io/lms/telemetry/schema/</loc>
-         <lastmod>2026-10-18</lastmod>
+         <lastmod>2026-10-20</lastmod>
     </url>
 </urlset>
