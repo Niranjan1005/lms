@@ -71,7 +71,8 @@ sequenceDiagram
     D->>D: Verify request binding, grant, artifacts, local capacity
     D->>D: Install + health-check + activate
     D-->>O: Signed activation receipt
-    O-->>L: Reconcile receipt; start trial clock from successful activation
+    O-->>L: Reconcile receipt
+    Note over O,L: Start trial clock after successful activation
 ~~~
 
 ## Feature purchase and add-on activation
@@ -261,7 +262,8 @@ sequenceDiagram
     else Stale but grace/revalidation policy allows restricted state
       L-->>D: Restricted/grace + recovery path
     else Authorization no longer valid
-      L-->>D: Disable unauthorized analytics; preserve recovery/diagnostics where allowed
+      L-->>D: Disable unauthorized analytics
+      Note over D,L: Preserve recovery and diagnostics where allowed
     end
 ~~~
 
@@ -278,6 +280,7 @@ sequenceDiagram
     else Expired and grace active
       L-->>R: Grace/restricted behavior per policy
     else Expired and grace ended
-      L-->>R: Deny analytics execution; keep recovery/diagnostics where allowed
+      L-->>R: Deny analytics execution
+      Note over R,L: Keep recovery and diagnostics where allowed
     end
 ~~~
